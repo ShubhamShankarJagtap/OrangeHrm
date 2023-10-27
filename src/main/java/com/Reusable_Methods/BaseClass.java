@@ -11,30 +11,34 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class BaseClass {
 
-  public  WebDriver driver;
+    public WebDriver driver;
 
-    public void launchBrowser(String browser){
+    public void launchBrowser(String browser) {
         switch (browser) {
-            case "chrome" -> {
+            case "chrome":
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
-            }
-            case "edge" -> {
+                break;
+
+            case "edge":
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
-            }
-            case "firefox" -> {
+                break;
+
+            case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
-            }
-            case "IE" -> {
+                break;
+
+            case "IE":
                 WebDriverManager.iedriver().setup();
                 driver = new InternetExplorerDriver();
-            }
-            case "safari" -> {
+                break;
+
+            case "safari":
                 WebDriverManager.safaridriver().setup();
                 driver = new SafariDriver();
-            }
+                break;
         }
     }
 }

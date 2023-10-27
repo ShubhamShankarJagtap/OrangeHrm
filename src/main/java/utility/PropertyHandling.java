@@ -11,7 +11,7 @@ public class PropertyHandling {
     public PropertyHandling(){
         try {
             // Path of the properties file.
-            String filePath= System.getProperty("F://IntelliJ_IDEA_WorkSpace_2023//OrangeHrm//target//config.properties");
+            String filePath= (".//target//config.properties");
 
             // To read the file.
             FileInputStream file = new FileInputStream(filePath);
@@ -30,5 +30,13 @@ public class PropertyHandling {
         String value = properties.getProperty(key);
         out.println(value);
         return value;
+    }
+
+    public static void main(String[] args) {
+
+        String browser =new PropertyHandling().getProperty("browser");
+        String url = new PropertyHandling().getProperty("orangeHrmUrl");
+
+        out.println("The browser to open " + url + " is : " + browser);
     }
 }
