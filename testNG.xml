@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Suite name = "Regression Test Suite">
+    <test name="Regression Testing">
+<Classes>
+    <Class name = "test.ApachePOI.Write">
+
+    </Class>
+</Classes>
+    </test>
+</Suite>
